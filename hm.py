@@ -290,9 +290,9 @@ class TreeProp:
                 if key not in d1:
                     d1.update({key : []})
                 d1[key].append(d[key][0])
-        return d1
+        return pd.DataFrame(d1)
 
 
 t = TreeProp('((G=F)>(G=F))')
 
-print(pd.DataFrame(t.truthTable()))
+print(t.truthTable)
